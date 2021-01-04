@@ -1,23 +1,80 @@
 /************ 공통사항 *************/
+* {box-sizing: border-box;}
+
+html, body{}
 
 
-/* ******************modal******************/
+.gold{color: #fff; background-color: rgb(180, 158, 103); border-radius: 0.2em; padding: 0.4em 1em; letter-spacing: 0.3em; font-size: 0.7em; display: inline-block;}
+.w-100{width: 100%;}
+.rel {position: relative;}
 
-/* ******************header******************/
-
-
-/* *****************  main-wrapper ******************/
-
-
-
-/* *****************  tour-wrapper ******************/
+.wrapper {width: 1400px; margin: auto;  overflow: hidden;}
+.wrapper-mid {max-width: 1300px; margin: auto; overflow: hidden;}
+.swiper-container {width: 100%; height: 100%;}
+.swiper-slide {text-align: center; display: flex; justify-content: center; align-items: center;}
 
 
-/* *****************  contact-wrapper******************/
+/* header */
+.header-wrapper{display: flex; justify-content: center; color: #fff;}
+.header-wrapper > .free {width: 100%; background-color: rgb(221, 120, 120); text-align: center; padding: 0.3em 0;}
+.header-wrapper > .free > button{border: 0; background-color: inherit; color: #fff; font-weight: bold; font-size: 1.2em; float: right;}
+
+
+/* navi */
+.navi-wrapper .navi-wrap{width: 1400px; margin: auto; position: absolute; z-index: 2; display: flex; color: #fff;}
+
+.navi-wrap .navi-left{flex: 80% 0 0; display: flex; align-items: baseline; padding: 2em 0;}
+.navi-wrap .navi-left .bars{padding-right: 1.5em;}
+.navi-wrap .navi-left .navi-logo > img{width: 6em;}
+.navi-wrap .navi-left .navi {padding: 0 1em;}
+
+.navi-wrap .navi-right{flex: 20% 0 0; display: flex; align-items: baseline; padding: 2em 0;}
+.navi-wrap .navi-right .login{padding-right: 1em;}
+.navi-wrap .navi-right > a{padding: 0 0.7em; font-size: 1.4em;color: #fff;}
 
 
 
-/* ***************** blog-wrapper ******************/
+
+/*  banner*/
+.banner-wrapper .banner-wrap img{position: relative;}
+.banner-wrapper .banner-wrap .slogan-wrapper{position: absolute;top: 50%; left: 10%; transform: translateY(-50%); text-align: left; color: #fff;}
+.banner-wrapper .banner-wrap .slogan-wrapper > .title-sub{background-color: rgb(180, 158, 103); border-radius: 0.2em; padding: 0.4em 1em; letter-spacing: 0.3em; font-size: 0.7em; display: inline-block;}
+.banner-wrapper .banner-wrap .slogan-wrapper > .title{font-size: 5em;}
+.banner-wrapper .banner-wrap .slogan-wrapper > .summury{font-size: 1.2em;}
+
+.pager-wrapper {display: flex; position: absolute; bottom: 15%; left: 18%; z-index: 2;  text-align: center;}
+.pager-wrapper .bt-arrow{background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 3.5em; height: 3.5em;opacity: 0.9; margin: 0 0.5em; position: relative;}
+.pager-wrapper .bt-arrow > i{color: #fff;}
+
+
+
+/* product-wrapper */
+.product-wrapper {margin-top: 4em; margin-bottom: 10em;;}
+.product-wrapper .text-wrapper{text-align: center;}
+.product-wrapper .text-wrapper .main-title{font-size: 2em;}
+
+.product-wrap{display: flex; margin-top: 1.5em;  justify-content: space-between;}
+
+.product-wrap .product {flex: 20% 0 0; position: relative; background-color: #fff;}
+.pro-show {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.5s;}
+.pro-show:hover{opacity: 1;}
+.product-wrap img {width: 330px; height: 350px; cursor: pointer;}
+
+
+.pro-show {background-color: #fff;}
+.product-wrap .p-title {margin-top: 0.7em; cursor: pointer;}
+.product-wrap .sales {color: #666; font-size: 0.9em; cursor: pointer;}
+.product-wrap .quick-wrap {position: absolute; top: 300px; text-align: center; line-height: 50px; cursor: pointer;}
+.pro-show .quick-wrap .quick {width: 330px; height: 50px; background-color: #fff;cursor: pointer;}
+
+
+
+
+
+
+
+
+
 
 
 
