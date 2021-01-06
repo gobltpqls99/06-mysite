@@ -1,17 +1,25 @@
 /************ 공통사항 *************/
 * {box-sizing: border-box;}
 
-html, body{}
+html, body{position: relative; height: 100%;}
+	
+body {margin: 0; padding: 0; }
 
+a {text-decoration: none; color: inherit;}
 
 .gold{color: #fff; background-color: rgb(180, 158, 103); border-radius: 0.2em; padding: 0.4em 1em; letter-spacing: 0.3em; font-size: 0.7em; display: inline-block;}
+
+.sgold{color: #fff; background-color: rgb(180, 158, 103); border-radius: 0.2em; padding: 0em 0.3em; letter-spacing: 0.02em; font-size: 0.7em; display: inline-block; margin-left: 1em;}
+
+.silver{color: #fff; background-color: rgb(177, 177, 177); border-radius: 0.2em; padding:0 0.3em; letter-spacing: -0.015em; font-size: 0.7em; display: inline-block; margin-left: 1em;}
 .w-100{width: 100%;}
 .rel {position: relative;}
 
-.wrapper {width: 1400px; margin: auto;  overflow: hidden;}
-.wrapper-mid {max-width: 1300px; margin: auto; overflow: hidden;}
-.swiper-container {width: 100%; height: 100%;}
-.swiper-slide {text-align: center; display: flex; justify-content: center; align-items: center;}
+.wrapper {max-width: 1200px; margin: auto; overflow: hidden;}
+.wrapper-mid {max-width: 1400px; margin: auto;}
+.wrapper-sm {max-width: 1000px; margin: auto;}
+.main-wrapper > .swiper-container {width: 100%; height: 100%;}
+.main-wrapper > .swiper-slide {text-align: center; display: flex; justify-content: center; align-items: center;}
 
 
 /* header */
@@ -21,23 +29,45 @@ html, body{}
 
 
 /* navi */
-.navi-wrapper .navi-wrap{width: 1400px; margin: auto; position: absolute; z-index: 2; display: flex; color: #fff;}
+.navi-wrapper { z-index: 100; padding: 1em 0; width: 100%; position: absolute; top: 2.5em; color: #fff;}
+.navi-wrapper .navi-wrap {}
+.navi-wrapper .navi-wrap .navi-left {display: flex; justify-content: flex-start; align-items: center; margin: 1em 0;}
+.navi-wrapper .navi-wrap .navi-left > i {color: #fff; font-size: 1.3em; margin-right: 0.5em;}
+.navi-wrapper .navi-wrap .navi-left .logoimg-wrap > img {width: 100px;}
+.navi-wrapper .navi-wrap .navi-left .logoimg-wrap {position: relative;}
+.logoimg-wrap .logo-b {position: absolute; left: 0.7em; top: 0.2em; opacity: 0;}
 
-.navi-wrap .navi-left{flex: 80% 0 0; display: flex; align-items: baseline; padding: 2em 0;}
-.navi-wrap .navi-left .bars{padding-right: 1.5em;}
-.navi-wrap .navi-left .navi-logo > img{width: 6em;}
-.navi-wrap .navi-left .navi {padding: 0 1em;}
+.navi-wrapper .navi-wrap .navi-left > div {padding: 0 0.7em;}
 
-.navi-wrap .navi-right{flex: 20% 0 0; display: flex; align-items: baseline; padding: 2em 0;}
-.navi-wrap .navi-right .login{padding-right: 1em;}
-.navi-wrap .navi-right > a{padding: 0 0.7em; font-size: 1.4em;color: #fff;}
+.navi-wrapper .navi-bg {position: relative; display: none;}
+.navi-wrapper .navi-bg .home-sub {display: flex; border-top: 1px solid #eee;}
 
+.navi-wrapper .navi-bg ul {padding-top: 3em; flex: 20% 0 0;}
+.navi-wrapper .navi-bg ul > li.main-title{padding-bottom: 0.7em; letter-spacing: 0.25em;}
+.navi-wrapper .navi-bg ul > li{line-height: 1.8em;}
+.navi-wrapper .navi-bg ul > img {width: 300px; padding-bottom: 1em;}
+
+
+
+
+.navi-wrapper:hover { background-color: #fff; color: #111;}
+.navi-wrapper:hover .logo-b {opacity: 1;}
+.navi-wrapper:hover .navi-left {color: #111;}
+.navi-wrapper:hover .navi-left > i{color: #111;}
+
+.navi-bg-wrapper {position: relative;}
+.navi-bg-wrapper .abs{position: absolute; top: 0; left: 0; width: 100%;}
+
+/* .navi-bg > .home-sub:nth-child(1) {display: none;}
+.navi-bg > .home-sub:nth-child(2) {display: none;}
+.navi-bg > .home-sub:nth-child(3) {display: none;}
+.navi-bg > .home-sub:nth-child(4) {} */
 
 
 
 /*  banner*/
 .banner-wrapper .banner-wrap img{position: relative;}
-.banner-wrapper .banner-wrap .slogan-wrapper{position: absolute;top: 50%; left: 10%; transform: translateY(-50%); text-align: left; color: #fff;}
+.banner-wrapper .banner-wrap .slogan-wrapper{position: absolute;top: 50%; left: 20%; transform: translateY(-50%); text-align: left; color: #fff;}
 .banner-wrapper .banner-wrap .slogan-wrapper > .title-sub{background-color: rgb(180, 158, 103); border-radius: 0.2em; padding: 0.4em 1em; letter-spacing: 0.3em; font-size: 0.7em; display: inline-block;}
 .banner-wrapper .banner-wrap .slogan-wrapper > .title{font-size: 5em;}
 .banner-wrapper .banner-wrap .slogan-wrapper > .summury{font-size: 1.2em;}
@@ -49,28 +79,34 @@ html, body{}
 
 
 /* product-wrapper */
-.product-wrapper {margin-top: 4em; margin-bottom: 10em;;}
+
+.product-wrapper .swiper-container {margin-top: 2em; width: 100%; height: 100%;}
+   
+.product-wrapper .swiper-slide {text-align: center; font-size: 18px;background: #fff; display: flex; justify-content: center; align-items: center; flex: 25% 0 0;}
+
+
+.product-wrapper {width: 100%; margin-top: 4em;}
 .product-wrapper .text-wrapper{text-align: center;}
 .product-wrapper .text-wrapper .main-title{font-size: 2em;}
 
-.product-wrap{display: flex; margin-top: 1.5em;  justify-content: space-between;}
+.product-wrap { position: relative;}
+.product-wrap .product {display: flex; background-color: #fff;}
+.product-wrap img {width: 300px; height: 320px; cursor: pointer;}
 
-.product-wrap .product {flex: 20% 0 0; position: relative; background-color: #fff;}
-.pro-show {position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.5s;}
-.pro-show:hover{opacity: 1;}
-.product-wrap img {width: 330px; height: 350px; cursor: pointer;}
+.product-wrap .product .pro-pack {position: relative; background-color: #fff;}
+.product-wrap .product .pro-show {position: absolute; opacity: 0; background-color: #fff; transition: all 0.6s;}
+.product-wrap .product .pro-show:hover{opacity: 1;}
 
-
-.pro-show {background-color: #fff;}
 .product-wrap .p-title {margin-top: 0.7em; cursor: pointer;}
 .product-wrap .sales {color: #666; font-size: 0.9em; cursor: pointer;}
-.product-wrap .quick-wrap {position: absolute; top: 300px; text-align: center; line-height: 50px; cursor: pointer;}
-.pro-show .quick-wrap .quick {width: 330px; height: 50px; background-color: #fff;cursor: pointer;}
+.product-wrap .quick-wrap {position: absolute; top: 270px; text-align: center; line-height: 50px; cursor: pointer;}
+.pro-show .quick-wrap .quick {width: 300px; height: 50px; background-color: #fff; cursor: pointer;}
 
+.product-wrap > .probt {position: absolute; top: 40%; transform: translateY(-40%);  z-index: 5; font-size: 3em; opacity: 0; transition: all 0.7s;}
+.product-wrap > .bt-next {position: absolute; right: 1%;}
+.product-wrap > .bt-prev {position: absolute; left: 1%;}
 
-
-
-
+.product-wrap:hover > .probt {opacity: 0.7;}
 
 
 
