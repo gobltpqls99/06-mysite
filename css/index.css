@@ -23,45 +23,44 @@ a {text-decoration: none; color: inherit;}
 
 
 /* header */
-.header-wrapper{display: flex; justify-content: center; color: #fff;}
+.header-wrapper{display: flex; justify-content: center; color: #fff;width: 100%;}
 .header-wrapper > .free {width: 100%; background-color: rgb(221, 120, 120); text-align: center; padding: 0.3em 0;}
 .header-wrapper > .free > button{border: 0; background-color: inherit; color: #fff; font-weight: bold; font-size: 1.2em; float: right;}
 
-
+.header {position: relative;}
 /* navi */
-.navi-wrapper { z-index: 100; padding: 1em 0; width: 100%; position: absolute; top: 2.5em; color: #fff;}
+.navi-wrapper {z-index: 3; width: 100%; padding:1.4em 0;color: #fff; height: auto; position: absolute; top: 0;}
 .navi-wrapper .navi-wrap {}
-.navi-wrapper .navi-wrap .navi-left {display: flex; justify-content: flex-start; align-items: center; margin: 1em 0;}
-.navi-wrapper .navi-wrap .navi-left > i {color: #fff; font-size: 1.3em; margin-right: 0.5em;}
-.navi-wrapper .navi-wrap .navi-left .logoimg-wrap > img {width: 100px;}
-.navi-wrapper .navi-wrap .navi-left .logoimg-wrap {position: relative;}
-.logoimg-wrap .logo-b {position: absolute; left: 0.7em; top: 0.2em; opacity: 0;}
 
-.navi-wrapper .navi-wrap .navi-left > div {padding: 0 0.7em;}
+.navi-left {width: 100%; display: flex; position: relative; align-items: center; justify-content: flex-start; padding: 0 5em;}
+.navi-left .menu {width: 5em; }
+.navi-left .home {margin-left : 3em;}
 
-.navi-wrapper .navi-bg {position: relative; display: none;}
-.navi-wrapper .navi-bg .home-sub {display: flex; border-top: 1px solid #eee;}
+ .navi-bg{width: 100%;  position: absolute; left: 50%; top: 3em;transform: translateX(-50%); border-top: 1px solid #eee; background-color: #fff; display: none;}
+ .navi-bg .home-sub {display: flex; max-width: 1300px; margin: auto;}
 
-.navi-wrapper .navi-bg ul {padding-top: 3em; flex: 20% 0 0;}
-.navi-wrapper .navi-bg ul > li.main-title{padding-bottom: 0.7em; letter-spacing: 0.25em;}
-.navi-wrapper .navi-bg ul > li{line-height: 1.8em;}
-.navi-wrapper .navi-bg ul > img {width: 300px; padding-bottom: 1em;}
+ .navi-bg .home-sub ul {flex: 20% 0 0; padding-top: 2em;}
+.navi-bg ul > li.main-title{padding-bottom: 0.7em; letter-spacing: 0.25em; }
+.navi-bg ul > li{line-height: 1.8em; }
+.navi-bg ul > img {width: 300px; padding-bottom: 1em;}
 
 
+.navi-left > i {color: #fff; font-size: 1.3em; margin-right: 1.5em;}
+.logoimg-wrap .img {width: 100px; }
+.logoimg-wrap {position: relative;}
+.logoimg-wrap .logo-b {position: absolute; left: 0; top: 0.15em; opacity: 0;}
 
 
-.navi-wrapper:hover { background-color: #fff; color: #111;}
-.navi-wrapper:hover .logo-b {opacity: 1;}
-.navi-wrapper:hover .navi-left {color: #111;}
-.navi-wrapper:hover .navi-left > i{color: #111;}
+/* .navi-right {display: flex; justify-content: flex-end; padding: 0 5em;} */
+.navi-right {display: flex; position: absolute; right: 5em; top: 1.45em;}
+.navi-right p.login {}
+.navi-right i {padding: 0 0.7em; margin-top: 0.2em; font-size: 1.2em;}
 
-.navi-bg-wrapper {position: relative;}
-.navi-bg-wrapper .abs{position: absolute; top: 0; left: 0; width: 100%;}
 
-/* .navi-bg > .home-sub:nth-child(1) {display: none;}
-.navi-bg > .home-sub:nth-child(2) {display: none;}
-.navi-bg > .home-sub:nth-child(3) {display: none;}
-.navi-bg > .home-sub:nth-child(4) {} */
+
+
+
+
 
 
 
@@ -80,27 +79,31 @@ a {text-decoration: none; color: inherit;}
 
 /* product-wrapper */
 
-.product-wrapper .swiper-container {margin-top: 2em; width: 100%; height: 100%;}
+.product-wrapper .swiper-container {margin-top: 2em; width: 100%; height: 100%; }
    
-.product-wrapper .swiper-slide {text-align: center; font-size: 18px;background: #fff; display: flex; justify-content: center; align-items: center; flex: 25% 0 0;}
+.product-wrapper .swiper-slide {text-align: center; font-size: 18px;background: #fff; display: flex; justify-content: center; align-items: center; flex: 25% 0 0; }
 
 
-.product-wrapper {width: 100%; margin-top: 4em;}
+.product-wrapper {width: 100%; margin-top: 4em;;}
 .product-wrapper .text-wrapper{text-align: center;}
 .product-wrapper .text-wrapper .main-title{font-size: 2em;}
 
-.product-wrap { position: relative;}
-.product-wrap .product {display: flex; background-color: #fff;}
-.product-wrap img {width: 300px; height: 320px; cursor: pointer;}
+.product-wrap {position: relative;}
+.product-wrap .product {display: flex; background-color: #fff; text-align: left; padding-top: 2em;}
+.product img {width: 270px; height: 260px; cursor: pointer;}
 
-.product-wrap .product .pro-pack {position: relative; background-color: #fff;}
+.product-wrap .product .pro-pack {position: relative; background-color: #fff; }
 .product-wrap .product .pro-show {position: absolute; opacity: 0; background-color: #fff; transition: all 0.6s;}
 .product-wrap .product .pro-show:hover{opacity: 1;}
 
-.product-wrap .p-title {margin-top: 0.7em; cursor: pointer;}
-.product-wrap .sales {color: #666; font-size: 0.9em; cursor: pointer;}
-.product-wrap .quick-wrap {position: absolute; top: 270px; text-align: center; line-height: 50px; cursor: pointer;}
-.pro-show .quick-wrap .quick {width: 300px; height: 50px; background-color: #fff; cursor: pointer;}
+.product-wrap .p-title {margin-top: 0.3em; cursor: pointer; font-size: 0.9em; text-align: left; position: relative;}
+.product-wrap .p-title > i{position: absolute; right: 0; top: 0.33em;}
+.product-wrap .sales {color: #666; font-size: 0.7em; cursor: pointer; text-align: left; }
+
+
+
+.product-wrap .quick-wrap {position: absolute; top: 220px; text-align: center; line-height: 40px; cursor: pointer;}
+.pro-show .quick-wrap .quick {width: 270px; height: 40px; background: rgba(255, 255, 255, 0.7); cursor: pointer; font-size: 0.7em;}
 
 .product-wrap > .probt {position: absolute; top: 40%; transform: translateY(-40%);  z-index: 5; font-size: 3em; opacity: 0; transition: all 0.7s;}
 .product-wrap > .bt-next {position: absolute; right: 1%;}
@@ -110,10 +113,41 @@ a {text-decoration: none; color: inherit;}
 
 
 
+/* new-designs */
+.newdesign-wrapper {background-color: #eee; text-align: center;  margin-top: 4em; padding-bottom: 15em;}
+
+
+.newdesignbt {border: 2px solid #111; margin-top: 3em; padding: 1em 1.5em;}
+.newdesign-wrapper .swiper-container {margin-top: 2em; width: 100%; height: 100%;}
+.newdesign-wrapper .swiper-slide {text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center; flex: 25% 0 0; }
+
+
+.newdesign-wrapper .text-wrapper{text-align: center; padding-top: 4em;}
+.newdesign-wrapper .text-wrapper .main-title{font-size: 2em;}
+.newdesign-wrapper .text-wrapper p.letter{font-size: 0.8em; color:#aaa; padding-top: 0.5em;}
+
+.newdesign-wrap {position: relative;}
+.newdesign-wrap .newdesign {display: flex; background-color: #eee; text-align: left; padding-top: 2em;}
+.newdesign img {width: 270px; height: 260px; cursor: pointer;}
+
+.newdesign-wrap .newdesign .pro-pack {position: relative; }
+.newdesign-wrap .newdesign .pro-show {position: absolute; opacity: 0;transition: all 0.6s; background-color: #eee;}
+.newdesign-wrap .newdesign .pro-show:hover{opacity: 1;}
+
+.newdesign-wrap .p-title {margin-top: 0.3em; cursor: pointer; font-size: 0.9em; text-align: left; position: relative;}
+.newdesign-wrap .p-title > i{position: absolute; right: 0; top: 0.33em;}
+.newdesign-wrap .sales {color: #666; font-size: 0.7em; cursor: pointer; text-align: left; }
 
 
 
+.newdesign-wrap .quick-wrap {position: absolute; top: 220px; text-align: center; line-height: 40px; cursor: pointer;}
+.pro-show .quick-wrap .quick {width: 270px; height: 40px; background: rgba(255, 255, 255, 0.7); cursor: pointer; font-size: 0.7em;}
 
+.newdesign-wrap > .probt {position: absolute; top: 40%; transform: translateY(-40%);  z-index: 5; font-size: 3em; opacity: 0; transition: all 0.7s;}
+.newdesign-wrap > .bt-next {position: absolute; right: 1%;}
+.newdesign-wrap > .bt-prev {position: absolute; left: 1%;}
+
+.newdesign-wrap:hover > .probt {opacity: 0.7;}
 
 
 
@@ -124,6 +158,9 @@ a {text-decoration: none; color: inherit;}
 
 
 /************ 반응형 *************/
+@media screen and (max-width: 1460px) {
+	.navi-wrapper .navi-wrap {padding: 0 1em;}
+}
 @media screen and (max-width: 1199px) {
 	
 }
