@@ -42,15 +42,26 @@ function Product() {
 	  },
 	});
 };
+function content () {
+	var swiper = new Swiper('.content-wrap', {
+		slidesPerView: 3,
+		slidesPerGroup: 3,
+		pagination: {
+		  el: '.content-wrap > .swiper-pagination',
+		  clickable: true,
+		},
+	   });
+}
 
 
 Product ();
 Newdesigns ();
 mainBanner();
+content();
 
 $(".header-wrapper > .free > button").click(Hbtclick);
 $(".menu a").mouseenter(onNaviEnter);
-$(".navi-wrapper").mouseleave(onNaviLeave);
+$(".navi-wrapper, .menu").mouseleave(onNaviLeave);
 
 
 
