@@ -13,43 +13,189 @@
 	<script src="../js/jquery-3.5.1.min.js"></script>
 	<script src="../js/swiper-bundle.min.js"></script>
 	<!-- <script src="../js/wow.min.js"></script> -->
+	<style>
+		.navi-wrapper {}
+		.navi-wrap { display: flex; background-color: salmon; }
+		.wrapper {max-width: 1300px; margin: auto;}
+
+
+		.allmenu {display: flex; padding: 0.5em 0; background-color: red;position: relative;}
+
+		.allmenu li  {display: flex; }
+		
+		.allmenu .menu-wrap {display: flex; position: absolute; left: 0;}
+
+		li.limenu > .submenu {flex: 0 0 70%; text-align: left; background-color: slateblue;}
+
+		.submenu > li {padding: 0.3em 0;}
+
+		.allmenu > a {padding-top: 0.2em; display: inline-block; padding: 0 1em;}
+
+		img {width: 100px; margin: 0 1em;}
+
+
+	</style>
 </head>
 <body>
-	<div class="product-wrap swiper-container">
-		<div class="product swiper-wrapper">
-		  <div class="swiper-slide">
-			<div class="pro-pack">
-				<img src="../img/bobber-table-black3.jpg" alt="bobber">
-				<div class="text-wrap">
-					<p class="p-title">Pack Bobber Lamps</p>
-					<p class="sales">$229.00-$284.00</p>
-				</div><!-- text-wrap -->
+<div class="navi-wrapper">
+	<div class="navi-wrap">
+		<li><i class="fa fa-bars" aria-hidden="true"></i></li>
+		<li><img src="../img/logo-light.png" alt=""></li>
+		<ul class="allmenu">
+			<a href="#">HOME--</a>
+			<div class="menu-wrap">
+				<li class="limenu">
+					<ul class="submenu">
+						<li>HOME STYLES</li>
+						<li><a href="#">v1 – ClassicDefault</a></li>
+						<li><a href="#">v2 – Product Landing</a></li>
+						<li><a href="#">v3 – Full Screen</a></li>
+						<li><a href="#">v4 – Minimal</a></li>
+						<li><a href="#">v5 – Dark</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>GLOBAL OPTIONS</li>
+						<li><a href="#">Page Load Transition</a></li>
+						<li><a href="#">Modal Popup</a></li>
+						<li><a href="#">Campaign Bar</a></li>
+						<li><a href="#">Top BarFeatured</a></li>
+						<li><a href="#">Header – Full Width</a></li>
+						<li><a href="#">Mobile/Full Menu – Dark</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>HEADER LAYOUTS</li>
+						<li><a href="#">Header v1</a></li>
+						<li><a href="#">Header v2</a></li>
+						<li><a href="#">Header v3</a></li>
+						<li><a href="#">Header v4</a></li>
+						<li><a href="#">Header v5</a></li>
+						<li><a href="#">Header v6</a></li>
+						<li><a href="#">Header v7</a></li>
+						<li><a href="#">Header v8</a></li>
+						<li><a href="#">Header v9</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>OTHER DEMOS</li>
+						<li><a href="#">FashionDemo</a></li>
+					</ul>
+				</li>
 			</div>
-			<div class="pro-show">
-				<img src="../img/bobber-pendant-black3-450x450.jpg" alt="bobbers" class="rel">
-				<div class="text-wrap">
-					<div class="quick-wrap">
-						<div class="quick">Quick View</div>
-					</div>
-					<p class="p-title">Pack Bobber Lamps</p>
-					<p class="sales">View product</p>
-				</div>
-			</div><!-- pro-show -->
-		  </div><!-- swiper-slide -->
-		  <div class="swiper-slide">Slide 2</div>
-		  <div class="swiper-slide">Slide 3</div>
-		  <div class="swiper-slide">Slide 4</div>
-		  <div class="swiper-slide">Slide 5</div>
-		  <div class="swiper-slide">Slide 6</div>
-		  <div class="swiper-slide">Slide 7</div>
-		  <div class="swiper-slide">Slide 8</div>
-		  <div class="swiper-slide">Slide 9</div>
-		  <div class="swiper-slide">Slide 10</div>
-		</div>
-		<!-- Add Pagination -->
-		<div class="swiper-pagination"></div>
-	   </div>
-
+			<a href="#">SHOP</a>
+			<div class="menu-wrap">
+				<li class="limenu">
+						<ul class="submenu">
+							<li>CATALOG</li>
+							<li><a href="#">Style 1</a></li>
+							<li><a href="#">Style 2Default</a></li>
+							<li><a href="#">Style 3</a></li>
+							<li><a href="#">Style 4</a></li>
+							<li><a href="#">FILTERS</a></li>
+							<li><a href="#">TopDefault</a></li>
+							<li><a href="#">Sidebar</a></li>
+							<li><a href="#">Slide Out</a></li>
+						</ul>
+						<ul class="submenu">
+							<li>CATALOG OPTIONS</li>
+							<li><a href="#">Background HeaderFeatured</a></li>
+							<li><a href="#">Width – Full</a></li>
+							<li><a href="#">Animation – Jump</a></li>
+							<li><a href="#">Load More – Button</a></li>
+							<li>SHOP PAGES</li>
+							<li><a href="#">My account – 2 Col</a></li>
+							<li><a href="#">Wishlist</a></li>
+						</ul>
+						<ul class="submenu">
+							<li>CART</li>
+							<li><a href="#">Shopping Cart</a></li>
+							<li>MINICART</li>
+							<li><a href="#">Top</a></li>
+							<li><a href="#">Side</a></li>
+							<li><a href="#">Dark</a></li>
+						</ul>
+						<ul class="submenu">
+							<li>CHECKOUT</li>
+							<li><a href="#">ModernFeatured</a></li>
+							<li><a href="#">Multi StepFeatured</a></li>
+							<li><a href="#">Classic</a></li>
+						</ul>
+				</li>
+			</div>
+			<a href="#">PRODUCT</a>
+			<div class="menu-wrap">
+				<li class="limenu">
+					<ul class="submenu">
+						<li></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</li>
+			</div>
+			<a href="#">PAGES</a>
+			<div class="menu-wrap">
+				<li class="limenu">
+					<ul class="submenu">
+						<li>PRODUCT TYPES</li>
+						<li><a href="#">Single</a></li>
+						<li><a href="#">Variable</a></li>
+						<li><a href="#">External</a></li>
+						<li><a href="#">Grouped</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>PRODUCT STYLE</li>
+						<li><a href="#">Showcase StyleFeatured</a></li>
+						<li><a href="#">Background – Dark</a></li>
+						<li><a href="#">Background – Transparent</a></li>
+						<li><a href="#">No Padding</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>PRODUCT GALLERY</li>
+						<li><a href="#">Carousel</a></li>
+						<li><a href="#">Column</a></li>
+						<li><a href="#">Grid</a></li>
+						<li><a href="#">Image Zoom</a></li>
+						<li><a href="#">Video Popup</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>PRODUCT DETAILS</li>
+						<li><a href="#">Tabs</a></li>
+						<li><a href="#">Accordion</a></li>
+						<li><a href="#">VerticalDefault</a></li>
+						<li><a href="#">Extended Description</a></li>
+					</ul>
+	
+				</li>
+			</div>
+			<a href="#">BLOG</a>
+			<div class="menu-wrap">
+				<li class="limenu">
+					<ul class="submenu">
+						<li>LISTING</li>
+						<li><a href="#">Classic</a></li>
+						<li><a href="#">Overlay</a></li>
+						<li><a href="#">Masonry</a></li>
+						<li><a href="#">CardsFeatured</a></li>
+						<li><a href="#">Grid</a></li>
+						<li><a href="#">List</a></li>
+						<li><a href="#">Blog + Sidebar</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>SINGLE ARTICLE</li>
+						<li><a href="#">Slider Gallery</a></li>
+						<li><a href="#">Featured Video</a></li>
+						<li><a href="#">Featured ImageDefault</a></li>
+						<li><a href="#">Hero Title</a></li>
+						<li><a href="#">Regular</a></li>
+						<li><a href="#">Regular + Sidebar</a></li>
+					</ul>
+					<ul class="submenu">
+						<li>NAVIGATION</li>
+						<li><a href="#">Image Background</a></li>
+						<li><a href="#">Simple</a></li>
+					</ul>
+				</li>
+			</div>
+		</ul>
+	</div>
+</div>
 <script src="../js/test.js"></script>
 </body>
 </html>

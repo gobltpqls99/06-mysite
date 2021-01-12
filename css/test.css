@@ -1,43 +1,23 @@
-html,
-body {
-  position: relative;
-  height: 100%;
-}
+/* 
+.header {position: relative; background-color: green; height: 100vh;}
+.navi-wrapper {z-index: 3; width: 100%; padding:1.4em 0;color: #fff; height: auto; position: absolute; top: 0;} 
+.navi-wrapper .navi-wrap {}
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
+.navi-left {width: 100%; display: flex; position: relative; align-items: center; justify-content: flex-start; padding: 0 10.5em; text-align: center;}
+.navi-left .menu {width: 5em; }
+.navi-left .home {margin-left : 2em;}
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
+ .navi-bg{width: 100%;  position: absolute; left: 50%; top: 3em;transform: translateX(-50%); text-align: left; border-top: 1px solid #eee; background-color: #fff; display: none;}
+ .navi-bg .home-sub {display: flex; max-width: 1300px; margin: auto;}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+ .navi-bg .home-sub ul {flex: 20% 0 0; padding-top: 2em;}
+.navi-bg ul > li.main-title{padding-bottom: 0.7em; letter-spacing: 0.25em; }
+.navi-bg ul > li{line-height: 1.8em; }
+.navi-bg ul > img {width: 300px; padding-bottom: 1em;}
 
 
-.product-wrap .product { background-color: #fff;}
-
-
-.product-wrap img {width: 330px; height: 350px; cursor: pointer;}
-
-.product-wrap .product .pro-pack {position: relative; background-color: #fff;}
-.product-wrap .product .pro-show {position: absolute; opacity: 0; background-color: #fff; transition: all 0.6s;}
-.product-wrap .product .pro-show:hover{opacity: 1;}
-
-.product-wrap .p-title {margin-top: 0.7em; cursor: pointer;}
-.product-wrap .sales {color: #666; font-size: 0.9em; cursor: pointer;}
-.product-wrap .quick-wrap {position: absolute; top: 300px; text-align: center; line-height: 50px; cursor: pointer;}
-.pro-show .quick-wrap .quick {width: 330px; height: 50px; background-color: #fff;cursor: pointer;}
+.navi-left > i {color: #fff; font-size: 1.3em; margin-right: 1.5em;}
+.logoimg-wrap .img {width: 100px; }
+.logoimg-wrap {position: relative;}
+.logoimg-wrap .logo-b {position: absolute; left: 0; top: 0.15em; opacity: 0;}
+ */

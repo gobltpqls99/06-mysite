@@ -1,4 +1,5 @@
 /************ 공통사항 *************/
+a {text-decoration: none; color: inherit;}
 * {box-sizing: border-box;}
 
 html, body{position: relative; height: 100%;}
@@ -6,10 +7,9 @@ html, body{position: relative; height: 100%;}
 body {margin: 0; padding: 0; }
 
 p {margin-bottom: 0;}
-a {text-decoration: none; color: inherit;}
 .hover-line {display: inline-block;}
-.hover-line::after {display: block; content: ""; border-top: 1px solid #111; margin-top: 0.25em; transition: all 0.3s; transform: scaleX(0); transform-origin: left;}
-.hover-line:hover::after {transform: scaleX(1); /* transform-origin: right; */}
+.hover-line::after {display: block; content: ""; border-top: 1px solid #111;transition: all 0.3s; transform: scaleX(0); transform-origin: left;}
+.hover-line:hover::after {transform: scaleX(1);}
 
 
 
@@ -36,7 +36,7 @@ a {text-decoration: none; color: inherit;}
 
 .header {position: relative;}
 /* navi */
-.navi-wrapper {z-index: 3; width: 100%; padding:1.4em 0;color: #fff; height: auto; position: absolute; top: 0;}
+.navi-wrapper {z-index: 3; width: 100%; padding:1.4em 0;color: #fff; height: auto; position: absolute; top: 0;} 
 .navi-wrapper .navi-wrap {}
 
 .navi-left {width: 100%; display: flex; position: relative; align-items: center; justify-content: flex-start; padding: 0 10.5em; text-align: center;}
@@ -167,10 +167,10 @@ a {text-decoration: none; color: inherit;}
 
 
 /* threec */
-.content-wrapper {width: 100%; margin-top: 3.5em; padding-bottom: 7em;}
+.content-wrapper {width: 100%; margin-top: 3.5em;}
 
-.icon-wrapper {display: flex; justify-content: space-between; align-items: center;}
-.icon-wrapper .icon-wrap {text-align: center; margin-top: 3em; flex: 33.3333% 0 0;}
+.icon-wrapper {display: flex; justify-content: space-between; align-items: center; height: 250px;}
+.icon-wrapper .icon-wrap {text-align: center; margin-top: 3em; flex: 33.3333% 0 0; }
 .icon-wrapper .icon-wrap > i {font-size: 3em;}
 .icon-wrapper .icon-wrap p.title {margin-top: 1em; font-size: 1.3em;}
 .icon-wrapper .icon-wrap p.summury {margin-top: 1em;}
@@ -186,11 +186,12 @@ a {text-decoration: none; color: inherit;}
 .content-wrap p.subtitle {font-size: 0.8em; letter-spacing: 0.14em; padding-top: 1.7em;}
 .content-wrap p.maintitle {font-size: 1.17em;}
 .content-wrap p.day {padding-top: 0.5em;}
-.content-wrap p.summury {padding-top: 0.5em;}
+.content-wrap p.summury {padding-top: 0.5em; height: 100px;}
 
 .content-wrapper img:hover {transform: scale(1.035);}
 
-.content-wrapper .swiper-pagination-bullet {background-color: burlywood;}
+.content-wrapper .swiper-pagination-bullet-active{background-color: burlywood;}
+.swiper-pagination {position: static; margin-top: 2em;}
 
 
 .content-wrap > .probt {position: absolute; top: 40%; transform: translateY(-40%);  z-index: 5; font-size: 3em; opacity: 0; transition: all 0.7s; color: #fff;}
@@ -199,25 +200,85 @@ a {text-decoration: none; color: inherit;}
 
 .content-wrap:hover > .probt {opacity: 0.7;}
 
+/* footer-wrapper */
+footer {background-color: #333; color: #fff;}
+.footer-wrapper {display: flex; justify-content: space-between; margin-bottom: 2em;}
+.footer-wrapper .ft-wrapper{display: flex; width: 75%; padding-top: 2em; }
+.footer-wrapper .ft-wrapper .company {width: 100%;}
+.footer-wrapper .ft-wrapper .company > p {padding-top: 1em;}
+.footer-wrapper .ft-wrapper .company > p:first-child{color:#888; letter-spacing: 0.1em;}
 
+
+.footer-wrapper .theme{padding-top: 2em; color: #888;}
+.footer-wrapper .theme > p{padding-top: 1em;}
+.footer-wrapper .theme > form {padding-top: 7em;}
+.footer-wrapper .theme > form > input {padding-right: 2.5em; padding: 0.8em 1em;}
+.footer-wrapper .theme > form > button {border: 2px solid #fff; background-color: inherit; color: #fff; padding: 0.75em 1.5em;margin-left: 0.6em;}
+
+.fam {border-top: 1px solid #444;}
+.fam .ft-fam{padding: 0.7em 1.5em;  display: flex; justify-content: space-between; align-items: center; }
+.f-icon > a > i {background-color: red; color: #fff; font-size: 1.5em;}
+
+.lang {align-items: center;  position: relative;}
+.lang p {padding-right: 1em; color: #777;}
+.lang p span{color: #fff; padding-left: 0.5em;}
+
+em.lang1 {position: absolute; left: 28%; top: -10%; background-color: #fff; display: none;}
+em.lang1 > p {padding: 0.5em 1em;}
+em.sel > p:hover {background-color: #eee;}
+
+
+em.lang2 {position: absolute; right: 10%; top: -10%; background-color: #fff;  display: none;}
+em.lang2 > p {padding: 0.5em 1em;}
+
+i.fa-angle-down {color: #fff;}
 
 
 /************ 반응형 *************/
-@media screen and (max-width: 1460px) {
-	.navi-wrapper .navi-wrap {padding: 0 1em;}
+@media screen and (max-width: 1400px) {
+.product img {width: 250px; height: 240px;}
+.product-wrap .quick-wrap {top: 270px;}
+.pro-show .quick-wrap .quick {width: 250px; height: 40px;}
+
+.newdesign img {width: 250px; height: 240px; cursor: pointer;}
+.newdesign-wrap .quick-wrap {top: 270px; }
+.newdesign-wrap .pro-show .quick-wrap .quick {width: 250px;}
+
+.content-wrap .content .swiper-slide {flex: 30% 0 0;}
+
+.content-wrap .content .img-wrap {height: 180px;}
+.content-wrap .content .img-wrap img {width: 310px;}
+
 }
 @media screen and (max-width: 1199px) {
 	
 }
 
 @media screen and (max-width: 991px) {
-	
+	.navi-left {padding: 0 5.5em;}
+	.navi-left .menu {display: none;}
+	.navi-wrap .logoimg-wrap {position: absolute; left: 50%; transform: translateX(-50%);}
+	.navi-right > p {display: none;}
+	.navi-right > .search {display: none;}
+	.navi-right > .heart {display: none;}
+
+	.product-wrapper .swiper-slide {flex: 33.3333% 0 0; }
+	.newdesign-wrapper .swiper-slide {flex: 33.3333% 0 0; }
+
+
 }
 
 @media screen and (max-width: 767px) {
+	.product-wrapper .swiper-slide {flex: 50% 0 0; }
+	.newdesign-wrapper .swiper-slide {flex: 50% 0 0; }
+	.icon-wrapper {display: block;}
 	
+	.content-wrap .content .swiper-slide {flex: 30% 0 0; margin: 0 1%; padding-top: 4em; position: relative;}
+
+	.content-wrap .content .img-wrap {height: 250px; overflow: hidden;}
+	.content-wrap .content .img-wrap img {width: 454px; transition: all 0.7s; overflow: hidden;}
 }
 
 @media screen and (max-width: 575px) {
-	
+
 }
